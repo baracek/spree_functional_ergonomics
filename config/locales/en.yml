@@ -1,6 +1,6 @@
 ---
 en:
-  fe_show_all: "(Show All)"
+  fe_show_all: "(Show All %{product_count})"
   fe_policies: "Policies"
   fe_home: "Home"
 
