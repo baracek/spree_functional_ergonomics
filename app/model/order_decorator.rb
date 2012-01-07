@@ -1,3 +1,3 @@
 Order.class_eval do
-  attr_accessible :completed_at
+  attr_accessible :created_at
 end

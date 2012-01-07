@@ -50,10 +50,8 @@
     <% end %>
   </table>
 
-  <% if @order.state == 'complete' %>
-    <%=t("order_date")%>
-    <%= f.spree_date_picker :completed_at %>
-  <% end %>
+  <%=t("order_date")%>
+  <%= f.spree_date_picker :created_at %>
 
   <%= hook :admin_order_form_buttons do %>
     <p class="form-buttons">
