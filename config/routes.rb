@@ -1,3 +1,10 @@
 Rails.application.routes.draw do
-  # Add your extension routes here
+  namespace :admin do 
+    resources :orders do
+      member do
+        get :add_product
+        get :do_checkout
+      end
+    end
+  end
 end
