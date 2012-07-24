@@ -2,7 +2,7 @@
   <%- locals = {:f => f} %>
   <%= hook :admin_order_form_line_item_row, locals do %>
     <td width="300"><%= link_to f.object.variant.product.name, edit_admin_product_url( f.object.variant.product )%> <%= link_to( "(" + variant_options(f.object.variant) + ")", edit_admin_product_variant_url( f.object.variant.product, f.object.variant ) ) unless f.object.variant.option_values.empty? %></td>
-    <td valign="top" class="price"><%= number_to_currency f.object.price %></td>
+    <td valign="top" class="price"><%= f.text_field :price %></td>
     <td valign="top" class="qty"><%=f.text_field :quantity, :style => "width:30px;", :class => "qty" %></td>
     <td valign="top" class="total"><%= number_to_currency (f.object.price * f.object.quantity)%></td>
   <% end %>
