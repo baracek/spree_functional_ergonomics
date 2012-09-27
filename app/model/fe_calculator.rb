@@ -8,6 +8,10 @@ class FeCalculator < Calculator
       order = object
     end    
     
+    if order.present? == false
+      return 0
+    end
+    
     ergocentric_rate = nil
     regular_items = false
     order.line_items.each do |item|
